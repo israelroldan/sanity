@@ -3,7 +3,7 @@ const hasWebSocket = typeof window !== 'undefined' && typeof window.WebSocket ==
 type WebsocketData = string | ArrayBuffer | SharedArrayBuffer | Blob | ArrayBufferView
 type EventHandler = {
   type: keyof WebSocketEventMap
-  listener: (this: WebSocket, ev: WebSocketEventMap[K]) => any
+  listener: (this: WebSocket, ev: any) => any
   options: boolean | AddEventListenerOptions
 }
 
